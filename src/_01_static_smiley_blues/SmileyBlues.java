@@ -6,7 +6,8 @@ import javax.swing.JPanel;
 public class SmileyBlues {
 	void start() {
 		// 1. Make a new JFrame and set it to be visible
-JFrame jf = new JFrame();
+
+		JFrame jf = new JFrame();
 jf.setVisible(true);
 		// 2. Set your frame's default close operation to JFrame.EXIT_ON_CLOSE
 jf.setDefaultCloseOperation(jf.EXIT_ON_CLOSE);
@@ -22,7 +23,16 @@ jf.pack();
 
 		// 5. Make three Smiley objects and add them to your panel
 
+Smiley s1 = new Smiley();
+jp.add(s1);
+Smiley s2 = new Smiley();
+jp.add(s2);
+Smiley s3 = new Smiley();
+jp.add(s3);
 		// 6. Pack your frame
+jf.pack();
+s1.setColor(s1.YELLOW);
+
 
 		// 7. RUN THE PROGRAM and make sure you see three blue Smileys!
 	}
