@@ -1,10 +1,13 @@
 package _03_jars._1_intro_to_jars;
 
+import org.jointheleague.graphical.robot.Robot;
+import java.awt.Color;
+
 
 public class RobotInAJar {
 	
 	/* 1.   Create a String variable and initialize it to your name  */
-	
+	String Robert = "Robert";
 	
 	/* If you did not make any syntax errors, there should be no red lines under your code. 
 	 * This is because the type String is part of the basic Java language that all programs  
@@ -50,7 +53,7 @@ public class RobotInAJar {
 	 * Select the robot.jar file, then add it to the build path, apply and close.
 	 */
 	
-	/* 6. Now if you hover your mouse over the word Robot, you will se anew option from the "quick fix" list: 
+	/* 6. Now if you hover your mouse over the word Robot, you will see anew option from the "quick fix" list: 
 	 * 				Import 'Robot (org.jointheleague.graphical.robot.Robot)
 	 * Select it. If all the red lines have disappeared, you can now complete the draw method below.
 	 * Run the program from the RobotInAJarRunner class and a shape should be drawn.
@@ -58,7 +61,13 @@ public class RobotInAJar {
 	
 	public void draw() {
 		/*** Write code to make your robot draw a shape here ****/
-		
-		
+		Robot bot = new Robot();
+		bot.setSpeed(500);
+		for (int i = 0; i  < 360/4; i++) {
+		bot.penDown();
+		bot.setRandomPenColor();
+		bot.move(10);
+		bot.turn(4);
+		}
 	}
 }

@@ -5,6 +5,15 @@ public class BackpackRunner {
 		new Backpack().packAndCheck();
 	
 		Backpack bp = new Backpack();
-		bp.putInBackpack(null);
+		Pencil pencil = new Pencil ();
+		Textbook t = new Textbook ();
+		Ruler r = new Ruler ();
+		bp.putInBackpack(pencil);
+		bp.putInBackpack(t);
+		bp.putInBackpack(r);
+		bp.goToSchool();
+		pencil.write("(:-O");
+		t.read();
+		r.measure();
 	}
 }
