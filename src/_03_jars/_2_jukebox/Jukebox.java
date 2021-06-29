@@ -5,6 +5,8 @@ package _03_jars._2_jukebox;
  */
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -12,7 +14,10 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -20,23 +25,39 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /*   If you don't have javazoom.jar in your project, you can download it from here: http://bit.ly/javazoom
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
-public class Jukebox implements Runnable {
-
+public class Jukebox implements Runnable, ActionListener {
+	JButton b = new JButton();
+	JButton bII = new JButton();
     public void run() {
 
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
 
 		// 3. Play the Song
+JFrame f = new JFrame();
+JPanel p = new JPanel();
 
-		/*
+p.add(b);
+p.add(bII);
+f.add(p);
+f.pack();
+f.setVisible(true);
+b.setText("Rock beat");
+bII.setText("Drop sound");
+b.addActionListener(this);
+bII.addActionListener(this);
+
+	
+}
+    
+/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
 		 * each song, or a picture of the album cover. When the button or album
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
-    }
+    
     
     
 	/* Use this method to add album covers to your Panel. */
@@ -44,6 +65,23 @@ public class Jukebox implements Runnable {
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		JButton buttonPressed = (JButton) e.getSource();
+    	System.out.println("?");
+    	if (buttonPressed.equals(b)) {
+    		
+    		Song s = new Song ("rock beat.mp3");
+    		s.play();
+    	}
+    	else if (buttonPressed.equals(bII)) {
+    		Song s2 = new Song ("drop.mp3");
+    		s2.play();
+    			}
 	}
 
 }
@@ -131,5 +169,7 @@ class Song {
 			return this.getClass().getResourceAsStream(songAddress);
 		}
 	}
+	
 }
-
+//new Song ("2223_andrew-duke_drone (1).wav");
+//new Song ("clocksound.wav");
