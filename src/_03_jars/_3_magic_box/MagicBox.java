@@ -82,15 +82,16 @@ public class MagicBox extends JPanel implements Runnable, MouseListener, MouseMo
 		// TODO Auto-generated method stub
 		int mouseX = e.getX();
 		int mouseY = e.getY();
-		System.out.println(mouseX + " " + " " +mouseY );
-		if (mouseX == 342 && mouseY == 633 || mouseX == 343 && mouseY == 633 || mouseX == 343 && mouseY == 632 || mouseX == 343 && mouseY == 635 || mouseX == 340 && mouseY == 631 || mouseX == 342 && mouseY == 632) {
+		System.out.println(mouseX + " And " + mouseY);
+
+		if (mouseX > 338 && mouseX < 357 && mouseY > 607 && mouseY < 648) {
 			JOptionPane.showMessageDialog(null, "This door is hard to reach but holds many pieces of valuable lore.\n As the old phrase goes, 'Fortune favors the bold'. ");
 		}
-		if (mouseX == 331 && mouseY == 144 || mouseX == 331 && mouseY == 145 || mouseX == 331 && mouseY == 146 || mouseX == 331 && mouseY == 147 || mouseX == 331 && mouseY == 148 || mouseX == 332 && mouseY == 144 ||  mouseX == 332 && mouseY == 145 ||  mouseX == 332 && mouseY == 146 ||  mouseX == 332 && mouseY == 147 ||  mouseX == 332 && mouseY == 148 ||  mouseX == 335 && mouseY == 144 ||  mouseX == 335 && mouseY == 145 || mouseX == 335 && mouseY == 146 || mouseX == 335 && mouseY == 147 || mouseX == 336 && mouseY == 144 || mouseX == 336 && mouseY == 145 || mouseX == 336 && mouseY == 146 || mouseX == 336 && mouseY == 147 || mouseX == 336 && mouseY == 148) {
+		if (mouseX > 325 && mouseX < 343 && mouseY > 138 && mouseY < 150) {
 			JOptionPane.showMessageDialog(null, "You twist the wheel. Immediatly, water sprays everywhere and you drop into the pool at the base of the fountain.\n As the old phrase goes, 'Curiosity killed the cat'. ");	
 		}
-if (mouseX == 199 && mouseY == 505 || mouseX == 199 && mouseY == 506 || mouseX == 199 && mouseY == 507 || mouseX == 199 && mouseY == 508 || mouseX == 199 && mouseY == 509 || mouseX == 199 && mouseY == 510 ||mouseX == 5199 && mouseY == 511 || mouseX == 199 && mouseY == 512 || mouseX == 199 && mouseY == 513 || mouseX == 199 && mouseY == 514 || mouseX == 199 && mouseY == 515 || mouseX == 199 && mouseY == 516 || mouseX == 200 && mouseY == 505 || mouseX == 200 && mouseY == 200 || mouseX == 200 && mouseY == 507 || mouseX == 200 && mouseY == 200 || mouseX == 200 && mouseY == 509 || mouseX == 200 && mouseY == 510 ||mouseX == 200 && mouseY == 511 || mouseX == 200 && mouseY == 512 || mouseX == 200 && mouseY == 513 || mouseX == 200 && mouseY == 514 || mouseX == 200 && mouseY == 515 || mouseX == 200 && mouseY == 516 ) {
-			JOptionPane.showMessageDialog(null, "You talk to the strangle man. He tells you to be adventurous but still wary of dangers.\n He also says that it is safer to open this palace's door than to work with its machinery. ");
+if (mouseX > 187 && mouseX < 201 && mouseY > 508 && mouseX < 534) {
+			JOptionPane.showMessageDialog(null, "You talk to the strange man. He tells you to be adventurous but still wary of dangers.");
 		}
 if (mouseX == 399 && mouseY == 657 || mouseX == 399 && mouseY == 658 || mouseX == 398 && mouseY == 657 || mouseX == 398 && mouseY == 658 || mouseX == 399 && mouseY == 657 || mouseX == 400 && mouseY == 400 || mouseX == 401 && mouseY == 657 || mouseX == 401 && mouseY == 658) {
 	JOptionPane.showMessageDialog(null, "You found a slip of green paper on the floor. It is a 500-dollar bill!");
