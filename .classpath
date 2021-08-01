@@ -6,7 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="src/gridworld.jar"/>
+	<classpathentry kind="lib" path="src/_06_gridworld/GridworldDriver.java"/>
 	<classpathentry kind="lib" path="src/javazoom.jar"/>
 	<classpathentry kind="lib" path="/Users/robert/Desktop/robot (1).JAR"/>
 	<classpathentry kind="output" path="bin"/>
