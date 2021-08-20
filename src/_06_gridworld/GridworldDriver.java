@@ -1,4 +1,4 @@
-package _06_gridworld;
+ package _06_gridworld;
 
 import info.gridworld.actor.Bug;
 import info.gridworld.actor.Flower;
